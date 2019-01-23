@@ -1,8 +1,8 @@
 ---
 layout: posts
-title: [RaspberryPi zero W] headless 초기 설정
+title: "[RaspberryPi zero W] headless 초기 설정"
+categories: memo
 date: 2019-01-23
-categories: Raspberry Pi
 ---
 
 Raspberry Pi zero W(이하 zero)를 사용해 볼 기회가 생겼다.
