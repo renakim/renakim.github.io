@@ -1,6 +1,6 @@
 ---
-layout: post
-title: [RaspberryPi zero W] 초기 설정
+layout: posts
+title: [RaspberryPi zero W] headless 초기 설정
 date: 2019-01-23
 categories: Raspberry Pi
 ---
