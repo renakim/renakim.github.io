@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: posts
+title:  "Welcome to Jekyll!"
+categories: memo
 title: First posting
 date: 2018-08-29
 ---
