@@ -13,4 +13,4 @@ zero 모델은 무선랜 지원 여부에 따라 두 타입이 있는데, 네임
 
 제품은 이렇게 생겼다. 확장 헤더 부분은 따로 납땜을 해 줘야 했다.
 
-![Raspberry Pi Zero W](/files/rpizerow_board.jpg)
+![Raspberry Pi Zero W](/files/rpizerow_board.jpg){: width="50%"}
