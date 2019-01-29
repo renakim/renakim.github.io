@@ -42,7 +42,7 @@ Raspberry pi 3 의 경우 USB 같은 인터페이스가 충분해서 직접 모�
 
 ---
 
-### Raspberry Pi zero W headless 설정 - 실패
+### Raspberry Pi zero W headless 설정
 
 raspberry pi 3에서 사용했던 방법을 떠올려 그대로 설정하려고 하니 네트워크 연결 방식이 다르다는 것을 깨달았다.
 
@@ -58,14 +58,14 @@ Raspberry Pi zero W는 compact 한 사이즈로 이더넷 커넥터가 없고, �
 
 Micro SD card에 raspbian을 설치하는 상세 방법은 다음 글을 참조하자. (ssh 사용 설정 까지)
 
-[[RaspberryPi3] 라즈베리파이3 - 라즈비안(Raspbian) OS 설치](!https://inmile.tistory.com/6?category=793890)
+[[RaspberryPi3] 라즈베리파이3 - 라즈비안(Raspbian) OS 설치](https://inmile.tistory.com/6?category=793890)
 
 참고로, 이전 버전의 raspbian을 다운받으려면 아래 링크로 가면 된다.
 
-- [Raspbian image download](!http://downloads.raspberrypi.org/raspbian/images/)
-- [Raspbian Lite image download](!http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_lite/images/)
+- [Raspbian image download](http://downloads.raspberrypi.org/raspbian/images/)
+- [Raspbian Lite image download](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_lite/images/)
 
-#### 무선랜 설정을 위한 wpa_supplicant.conf 작성
+#### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 실패
 
 wpa_supplicant.conf 라는 빈 파일을 만들고, 아래 내용을 작성한다.
 
@@ -107,13 +107,13 @@ There was an error running option N2 Wi-fi.
 
 ---
 
-### Raspberry Pi zero W headless 설정 - 성공!
+#### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 성공!
 
 시리얼을 통해 무선랜 쪽에 문제가 있는걸 확인하고 검색하던 중, wpa_supplicant 디버깅에 관한 내용이 눈에 띄었다.
 
 다음 링크에 보면 wpa_supplicant 명령어에 대한 내용이 있다.
 
-[Raspberrypi forum: Raspbian Stretch: Wifi not starting on boot](!https://www.raspberrypi.org/forums/viewtopic.php?t=191061&start=25)
+[Raspberrypi forum: Raspbian Stretch: Wifi not starting on boot](https://www.raspberrypi.org/forums/viewtopic.php?t=191061&start=25)
 
 zero에 시리얼로 접속한 상태에서 아래 명령을 수행해보니, 에러가 출력되었다.
 
@@ -191,6 +191,7 @@ network={
 - boot 드라이브에 빈 ssh 파일 및 [wpa_supplicant.conf](#wpa_supplicant.conf) 작성하여 추가
 - sd card를 zero에 삽입하고 전원 연결 후 1~2분 대기
 - raspberrypi.local로 ssh 접속 (pi/raspberry)
+  - 먼저 ping을 해봐도 좋다. (\$ ping raspberrypi.local)
 
 이 때 다른 raspberry pi가 연결되어있으면 그쪽으로 연결될 수 있으므로 단독 연결하는게 좋다.
 
