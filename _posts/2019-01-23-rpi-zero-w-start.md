@@ -5,8 +5,6 @@ categories: RaspberryPi
 date: 2019-01-23
 ---
 
-## Raspberry Pi zero W 초기 설정
-
 **Raspberry Pi zero W**(이하 zero)를 사용해 볼 기회가 생겼다.
 
 zero 모델은 무선랜 지원 여부에 따라 두 타입이 있는데, 제품명에 W가 붙은 것이 무선랜 지원 모델이다. 이 글에서 zero 초기 설정을 진행하면서 실패(?)한 경험을 정리하려고 한다.
@@ -15,34 +13,37 @@ zero 모델은 무선랜 지원 여부에 따라 두 타입이 있는데, 제품
 
 ![Raspberry Pi Zero W](/files/rpizerow_board.jpg){: width="70%"}
 
-### 환경 준비
+## 환경 준비
 
-#### Material
+### Material
 
 - Micro sd card: 최소 4GB 이상
 - SD card reader
 
-#### 환경
+### 환경
 
 - Windows 10 64bit
 
-  Raspbian은 커널 버전 호환 문제가 있어서 다음 두 버전을 사용했다.
-
-- Raspbian image
+* Raspbian image
+  Raspbian은 4.9.x & 4.14.x 두 버전을 비교 사용할 일이 있어서 다음 버전들을 사용했다.
   - 2017-11-29-raspbian-stretch-lite
   - 2018-03-13-raspbian-stretch-lite
+
+참고: [Rasbian release note](http://downloads.raspberrypi.org/raspbian/release_notes.txt){:target="\_blank"}
 
 ### Headless
 
 Headless setup은 디스플레이 없이 설정하는 방식을 말한다. 단어 검색을 해보니 보통 IT 분야에서는 모니터가 없다는 뜻으로 쓰이는 듯 하다.
 
-Raspberry pi 3 의 경우 USB 같은 인터페이스가 충분해서 직접 모니터, 키보드, 마우스를 연결해서 설정해도 무방하지만 하나하나 선 연결하는게 굉장히 귀찮다.
+Raspberry pi 3 의 경우 USB와 같은 인터페이스가 충분해서 직접 모니터, 키보드, 마우스를 연결해서 설정해도 무방하지만 하나하나 선 연결하는게 굉장히 귀찮다.
 
-특히 zero 모델은 USB 포트가 micro 5pin 1개 뿐이기 때문에 포트를 확장할 수 있는 허브가 없으면 headless 설정이 훨씬 간편하다.
+특히나 zero 모델은 USB 포트가 micro 5pin 1개 뿐이기 때문에 포트를 확장할 수 있는 허브가 없다면 모니터를 통한 설정은 어렵다고 봐야 한다.
+
+여러 모로 headless 설정이 훨씬 간편하다고 볼 수 있다.
 
 ---
 
-### Raspberry Pi zero W headless 설정
+## Raspberry Pi zero W headless 설정
 
 raspberry pi 3에서 사용했던 방법을 떠올려 그대로 설정하려고 하니 네트워크 연결 방식이 다르다는 것을 깨달았다.
 
@@ -54,22 +55,24 @@ Raspberry Pi zero W는 compact 한 사이즈로 이더넷 커넥터가 없고, �
 
 ---
 
-#### Micro SD card에 raspbian 설치 (image write)
+### Micro SD card에 raspbian 설치 (image write)
 
 Micro SD card에 raspbian을 설치하는 상세 방법은 다음 글을 참조하자. (ssh 사용 설정 까지)
 
-[[RaspberryPi3] 라즈베리파이3 - 라즈비안(Raspbian) OS 설치](https://inmile.tistory.com/6?category=793890)
+[[RaspberryPi3] 라즈베리파이3 - 라즈비안(Raspbian) OS 설치](https://inmile.tistory.com/6?category=793890){:target="\_blank"}
 
 참고로, 이전 버전의 raspbian을 다운받으려면 아래 링크로 가면 된다.
 
-- [Raspbian image download](http://downloads.raspberrypi.org/raspbian/images/)
-- [Raspbian Lite image download](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_lite/images/)
+- [Raspbian image download](http://downloads.raspberrypi.org/raspbian/images/){:target="\_blank"}
+- [Raspbian Lite image download](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_lite/images/){:target="\_blank"}
 
-### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 실패 (참고)
+---
+
+### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 실패한 내용 (참고)
 
 wpa_supplicant.conf 라는 빈 파일을 만들고, 아래 내용을 작성한다.
 
-**# 동작하지 않는 설정파일**
+_**동작하지 않았던 설정파일**_
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -88,7 +91,7 @@ network={
 그리고 sd card를 RPI zero W에 삽입한 후 전원을 연결하면 된다.
 초기 설정되는 시간을 감안해 약 90~120초 정도가 지난 후 raspberrypi.local로 ssh 연결을 해보라고 하는데...
 
-**연결이 되질 않는다.**
+**연결이 되지 않는다.**
 
 혹시 뭔가 잘못 설정했나 싶어 이미지를 새로 올려보고 설정파일 내용을 바꿔보고 이것저것 다 해봤지만 여전히 안 된다.
 
@@ -120,12 +123,12 @@ There was an error running option N2 Wi-fi.
 
 다음 링크에 보면 wpa_supplicant 명령어에 대한 내용이 있다.
 
-[Raspberrypi forum: Raspbian Stretch: Wifi not starting on boot](https://www.raspberrypi.org/forums/viewtopic.php?t=191061&start=25)
+[Raspberrypi forum: Raspbian Stretch: Wifi not starting on boot](https://www.raspberrypi.org/forums/viewtopic.php?t=191061&start=25){:target="\_blank"}
 
 zero에 시리얼로 접속한 상태에서 아래 명령을 수행해보니, 에러가 출력되었다.
 
 ```
-$ sudo wpa_supplicant -d -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+\$ sudo wpa_supplicant -d -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
 wpa_supplicant v2.4
 random: Trying to read entropy from /dev/random
 Successfully initialized wpa_supplicant
@@ -182,9 +185,9 @@ ctrl_interface=DIR=/var/run/wpa_supplicant
 country=US
 update_config=1
 network={
-    ssid="your_ssid"
-    psk="your_pw"
-    key_mgmt=WPA-PSK
+ssid="your_ssid"
+psk="your_pw"
+key_mgmt=WPA-PSK
 }
 ```
 
@@ -203,3 +206,5 @@ network={
 이 때 다른 raspberry pi가 연결되어있으면 그쪽으로 연결될 수 있으므로 단독 연결하는게 좋다.
 
 초기 설정은 이걸로 끝이다.
+
+다음 글에서는 WIZ850IO 모듈을 이용해 이더넷을 추가하는 방법에 대해 정리할 예정이다.
