@@ -65,7 +65,7 @@ Micro SD card에 raspbian을 설치하는 상세 방법은 다음 글을 참조�
 - [Raspbian image download](http://downloads.raspberrypi.org/raspbian/images/)
 - [Raspbian Lite image download](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian_lite/images/)
 
-#### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 실패
+### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 실패 (참고)
 
 wpa_supplicant.conf 라는 빈 파일을 만들고, 아래 내용을 작성한다.
 
@@ -94,7 +94,14 @@ network={
 
 딱히 복잡한 설정을 한 것도 아닌데 뭔가 문제가 있다. 다시 검색에 들어갔다.
 
-일단 증상을 확인하기 위해 무선랜(wlan)을 통한 haedless 설정은 포기하고, 확장 헤더 납땜 후 다음 사진과 같이 serial 케이블을 연결해 zero에 접속했다.
+일단 무선랜(wlan)을 통한 haedless 설정은 포기하고, 원인을 확인하기 위해서 확장 헤더 납땜 후 다음 사진과 같이 serial 케이블을 연결해 zero에 접속했다.
+
+serial을 사용하려면 boot의 config.txt파일에 아래 옵션을 추가해야 한다.
+
+```
+# Enable uart
+enable_uart=1
+```
 
 ![Raspberry Pi Zero W - serial 연결](/files/rpizerow_serial.jpg){: width="70%"}
 
@@ -107,7 +114,7 @@ There was an error running option N2 Wi-fi.
 
 ---
 
-#### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 성공!
+### 무선랜 설정을 위한 wpa_supplicant.conf 작성 - 성공!
 
 시리얼을 통해 무선랜 쪽에 문제가 있는걸 확인하고 검색하던 중, wpa_supplicant 디버깅에 관한 내용이 눈에 띄었다.
 
