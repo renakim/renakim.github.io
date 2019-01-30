@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://renakim.github.io/sitemap.xml
