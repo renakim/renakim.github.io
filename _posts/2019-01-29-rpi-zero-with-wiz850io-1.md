@@ -11,7 +11,7 @@ tags:
 
 이번 글에서는 Raspberry Pi zero W (이하 RPI zero)에 IO 모듈을 연결하여 이더넷을 추가하는 방법을 정리해 본다.
 
-사용 제품은 WIZnet의 WIZ850IO 라는 모듈로, 이더넷 칩인 W5500을 기반으로 만들어진 모듈이다.
+사용 제품은 WIZnet의 WIZ850IO 라는 모듈로, 이더넷 칩인 W5500과 RJ45 커넥터를 포함하고 있다.
 
 <img src="https://wizwiki.net/wiki/lib/exe/fetch.php?media=products:wiz850io:wiz850io.png" width="35%" />
 
@@ -26,8 +26,6 @@ RPI zero에 SPI 인터페이스를 통해 연결하여 이더넷을 추가할 �
 
 ---
 
-### Overview
-
 과정은 크게 다음과 같은 단계로 나눌 수 있을 것 같다.
 
 - RPI zero 초기 설정 - 이전 글 참조
@@ -37,11 +35,42 @@ RPI zero에 SPI 인터페이스를 통해 연결하여 이더넷을 추가할 �
 
 ### 개발 환경
 
-- Windows 10 64bit
+개발 환경은 다음과 같다. 
+Raspbian은 커널 호환 테스트 문제로 최신 버전이 아닌 2018-03-13 버전을 사용했다.
+
 - Ubuntu 16.04 64bit VM (for cross-compile)
 
 - Raspbian version
   - 2018-03-13-raspbian-stretch-lite (Linux kernel 4.9.80+)
+
+### Pin 연결
+
+아래는 RPI zero와 WIZ850IO의 pin 연결 정보이다.
+
+각각의 Pinmap은 다음 링크에서 확인할 수 있다.
+RPI zero의 경우 방향이 헷갈릴 수 있는데, micro sd card 슬롯이 있는 쪽부터 1번이라고 보면 된다.
+
+- [WIZ850IO specification](https://wizwiki.net/wiki/doku.php?id=products:wiz850io:start){:target="\_blank"}
+- [Raspberry Pi pinout](https://pinout.xyz/){:target="\_blank"}
+
+
+| RPI zero       | WIZ850IO |
+| -------------- | -------- |
+| 6 (GND)        | GND      |
+| 1 (3.3V)       | 3.3V     |
+| 23 (SPI0_SCLK) | SCLK     |
+| 19 (SPI0_MOSI) | MOSI     |
+| 21 (SPI0_MISO) | MISO     |
+| 18 (BCM24)     | RSTn     |
+| 15 (BCM22)     | INTn     |
+| 24 (SPI0_CE0)  | SCNn     |
+
+
+Pin을 모두 연결하면 대략 이런 모습이 된다.
+
+![Raspberry Pi Zero W - WIZ850IO](/files/rpi-zero-with-wiz850io_1.jpg){: width="50%"}
+
+----
 
 ### Raspberry pi kernel compile
 
