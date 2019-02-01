@@ -5,21 +5,23 @@ categories: RaspberryPi
 date: 2019-01-29
 tags:
   - raspberrypi
+  - 라즈베리파이
   - wiz850io
   - w5500
 ---
+<!-- Add ethernet to Raspberry Pi zero W with WIZ850IO -->
 
 이번 글에서는 Raspberry Pi zero W (이하 RPI zero)에 IO 모듈을 연결하여 이더넷을 추가하는 방법을 정리해 본다.
 
 사용 제품은 WIZnet의 WIZ850IO 라는 모듈로, 이더넷 칩인 W5500과 RJ45 커넥터를 포함하고 있다.
 
-<img src="https://wizwiki.net/wiki/lib/exe/fetch.php?media=products:wiz850io:wiz850io.png" width="35%" />
+<img src="https://wizwiki.net/wiki/lib/exe/fetch.php?media=products:wiz850io:wiz850io.png" width="30%" />
 
 W5500은 hardwired TCP/IP가 내장된 이더넷 컨트롤러 칩으로, SPI 통신을 지원한다. 임베디드 시스템 등에 쉽게 인터넷 연결을 추가할 수 있도록 도와준다.
 
-RPI zero에 SPI 인터페이스를 통해 연결하여 이더넷을 추가할 것이다.
+RPI zero에 SPI 인터페이스를 통해 WIZ850IO 모듈을 연결하여 이더넷을 추가할 것이다. 이더넷을 추가하면, 무선랜(WiFi)보다 안정적으로 인터넷을 사용할 수 있다.
 
-제품의 상세 정보는 아래 링크에서 확인할 수 있다.
+WIZ850IO 모듈의 상세 정보는 아래 링크에서 확인할 수 있다.
 
 - [WIZwiki - WIZ850io](https://wizwiki.net/wiki/doku.php?id=products:wiz850io:start)
 - [WIZ850IO 구매처](http://shop.wiznet.co.kr/front/contents/product/view.asp?cateid=48&pid=1263){:target="\_blank"}
@@ -28,7 +30,8 @@ RPI zero에 SPI 인터페이스를 통해 연결하여 이더넷을 추가할 �
 
 과정은 크게 다음과 같은 단계로 나눌 수 있을 것 같다.
 
-- RPI zero 초기 설정 - 이전 글 참조
+- RPI zero 초기 설정
+  - 이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/2019/01/23/rpi-zero-w-start/)
 - RPI zero kernel compile
 - Device tree 작성 & 적용 (for W5500)
 - 동작 테스트
@@ -66,7 +69,7 @@ RPI zero의 경우 방향이 헷갈릴 수 있는데, micro sd card 슬롯이 �
 | 24 (SPI0_CE0)  | SCNn     |
 
 
-Pin을 모두 연결하면 대략 이런 모습이 된다.
+Pin을 모두 연결하면 이런 모습이 된다.
 
 ![Raspberry Pi Zero W - WIZ850IO](/files/rpi-zero-with-wiz850io_1.jpg){: width="50%"}
 
