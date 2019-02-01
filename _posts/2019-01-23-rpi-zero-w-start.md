@@ -5,10 +5,9 @@ categories: RaspberryPi
 date: 2019-01-23
 tags:
   - raspberrypi
+  - rpizero
   - headless
-tags:
-  - raspberrypi
-  - headless
+  - wlan
 ---
 
 **Raspberry Pi zero W**(이하 RPI zero)를 사용해 볼 기회가 생겼다.
@@ -208,10 +207,12 @@ network={
 - boot 드라이브에 빈 ssh 파일 및 [wpa_supplicant.conf](#wpa_supplicant.conf) 작성하여 추가
 - sd card를 RPI zero에 삽입하고 전원 연결 후 1~2분 대기
 - raspberrypi.local로 ssh 접속 (초기 계정: pi / raspberry)
-  - 먼저 ping을 해봐도 좋다. (\$ ping raspberrypi.local)
+  - 접속 전에 먼저 ping을 해봐도 좋다. (\$ ping raspberrypi.local)
 
-이 때 다른 raspberry pi가 연결되어있으면 그쪽으로 연결될 수 있으므로 단독 연결하는게 좋다.
+혹시라도 다른 raspberry pi가 연결되어있으면 그쪽으로 연결될 수 있으므로 단독 연결하는게 좋다.
 
 초기 설정은 이걸로 끝이다.
 
-다음 글에서는 WIZ850IO 모듈을 이용해 이더넷을 추가하는 방법에 대해 정리할 예정이다.
+다음 글에서 WIZ850IO 모듈을 이용해 이더넷을 추가하는 방법에 대해 정리할 예정이다.
+
+---

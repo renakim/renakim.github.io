@@ -28,7 +28,9 @@ WIZ850IO 모듈의 상세 정보는 아래 링크에서 확인할 수 있다.
 
 ---
 
-과정은 크게 다음과 같은 단계로 나눌 수 있을 것 같다.
+과정은 크게 다음과 같이 나눌 수 있다.
+
+두 편으로 나누어 진행하며, 본 글에서는 RPI zero 초기 설정과 kernel compile에 대한 내용을 다룰 것이다.
 
 - RPI zero 초기 설정
   - 이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/2019/01/23/rpi-zero-w-start/)
@@ -181,11 +183,3 @@ $ scp drivers/net/ethernet/wiznet/*ko pi@<RPI zero IP address>:/home/pi
 
 다음 글에서 Device tree 작성 및 적용, 테스트 까지 진행해 본다.
 
-<!-- ### Device tree overlay
-
-Device tree에 대한 설명은 다음 링크를 참조한다.
-
-- [라즈베리 파이 문서: 10. 디바이스 트리, 오버레이, 파라미터](https://wikidocs.net/3205)
-- [Raspberry Pi doc: Device Trees, overlays, and parameters](ttps://www.raspberrypi.org/documentation/configuration/device-tree.md)
-
-아래 내용은 RPI zero에서 직접 진행해도 무방하다. -->
