@@ -2,13 +2,14 @@
 layout: posts
 title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850IO (1)"
 categories: RaspberryPi
-date: 2019-01-29
+date: 2019-01-29 00:00
 tags:
   - raspberrypi
   - 라즈베리파이
   - wiz850io
   - w5500
 ---
+
 <!-- Add ethernet to Raspberry Pi zero W with WIZ850IO -->
 
 이번 글에서는 Raspberry Pi zero W (이하 RPI zero)에 IO 모듈을 연결하여 이더넷을 추가하는 방법을 정리해 본다.
@@ -37,6 +38,8 @@ WIZ850IO 모듈의 상세 정보는 아래 링크에서 확인할 수 있다.
 - RPI zero kernel compile
 - Device tree 작성 & 적용 (for W5500)
 - 동작 테스트
+
+--- 
 
 ### 개발 환경
 

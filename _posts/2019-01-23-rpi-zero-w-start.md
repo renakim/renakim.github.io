@@ -3,11 +3,7 @@ layout: posts
 title: "[RaspberryPi zero W] headless 초기 설정"
 categories: RaspberryPi
 date: 2019-01-23
-tags:
-  - raspberrypi
-  - rpizero
-  - headless
-  - wlan
+tags: [raspberrypi, rpizero, headless, wlan]
 ---
 
 **Raspberry Pi zero W**(이하 RPI zero)를 사용해 볼 기회가 생겼다.
@@ -30,7 +26,8 @@ RPI zero 모델은 무선랜 지원 여부에 따라 두 타입이 있는데, �
 - Windows 10 64bit
 
 * Raspbian image
-  Raspbian은 4.9.x & 4.14.x 두 버전을 비교 사용할 일이 있어서 다음 버전들을 사용했다.
+  Raspbian은 두 버전의 커널을 비교 사용할 일이 있어서 다음 버전들을 사용했다.
+
   - 2017-11-29-raspbian-stretch-lite
   - 2018-03-13-raspbian-stretch-lite
 
@@ -46,7 +43,7 @@ RPI zero 모델은 무선랜 지원 여부에 따라 두 타입이 있는데, �
 
 Headless setup은 디스플레이 없이 설정하는 방식을 말한다. 단어 검색을 해보니 보통 IT 분야에서는 모니터가 없다는 뜻으로 쓰이는 듯 하다.
 
-Raspberry pi 3 의 경우 USB와 같은 인터페이스가 충분해서 직접 모니터, 키보드, 마우스를 연결해서 설정해도 무방하지만 하나하나 선 연결하는게 굉장히 귀찮다.
+Raspberry pi 3 의 경우 USB와 같은 인터페이스가 충분해서 직접 모니터, 키보드, 마우스를 연결해서 설정해도 무방하지만 하나하나 선 연결하는게 굉장히 번거롭다.
 
 특히나 RPI zero 모델은 USB 포트가 micro 5pin 1개 뿐이기 때문에 포트를 확장할 수 있는 허브가 없다면 모니터를 통한 설정은 어렵다고 봐야 한다.
 

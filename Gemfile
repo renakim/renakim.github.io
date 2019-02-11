@@ -4,6 +4,7 @@ source "https://rubygems.org"
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 gem "jekyll", "~> 3.5"
+# gem "jekyll", "3.7.4"
 gem "minimal-mistakes-jekyll"
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'jekyll-language-plugin'
