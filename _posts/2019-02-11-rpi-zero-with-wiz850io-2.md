@@ -18,9 +18,17 @@ tags: [raspberrypi, rpizero, wiz850io, w5500]
 
 ### Custom kernel 적용
 
-지난 글 마지막 스탭에서 Host linux에서 컴파일 한 커널을 scp를 이용해 RPI zero로 복사해 주었었다.
+지난 글 마지막 스텝에서 Host linux에서 컴파일 한 커널을 scp를 이용해 RPI zero로 복사해 주었었다.
 
-zImage와 w5100.ko, w5100-spi.ko 파일이 있을 것이다.
+RPI zero의 홈 디렉토리에 들어가 보면 zImage와 w5100.ko, w5100-spi.ko 파일이 있을 것이다.
+아래 명령으로 확인하자.
+
+```
+$ cd
+$ ls -al
+```
+
+커널 적용 방법은 두 가지로, 어느 방법으로 진행해도 무방하다.
 
 #### 기존 커널 파일을 대체하는 방법
 
@@ -37,22 +45,27 @@ $ sudo reboot
 ```
 
 부팅이 완료되면, 다음 명령어를 이용해 새 커널로 적용되었는지 확인해 본다.
-\$ uname -r
+
+```
+$ uname -r
+```
 
 #### 기존 커널을 유지하고 config.txt에서 추가하는 방법
 
 기존 커널을 그대로 두고 새로운 이름의 커널을 /boot/config.txt 에서 직접 지정해도 된다.
 
-\$ mv zImage kernel_w5500.img
+```
+$ mv zImage kernel_w5500.img
+```
 
-새 이미지를 /boot/ 폴더로 복사 후, config.txt에서 파일을 지정해 준다.
+새 이미지를 /boot/ 폴더로 복사 후, config.txt에서 파일명을 지정해 준다.
 
 ```
 $ sudo vi /boot/config.txt
 ...
 kernel=kernel_w5500.img
-...
 
+# 저장 후 reboot
 $ sudo reboot
 ```
 
