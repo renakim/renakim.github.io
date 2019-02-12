@@ -1,31 +1,27 @@
 ---
 layout: posts
-title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850IO (1)"
+title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850io (1)"
 categories: RaspberryPi
 date: 2019-01-29 00:00
-tags:
-  - raspberrypi
-  - 라즈베리파이
-  - wiz850io
-  - w5500
+tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---
 
-<!-- Add ethernet to Raspberry Pi zero W with WIZ850IO -->
+<!-- Add ethernet to Raspberry Pi zero W with WIZ850io -->
 
 이번 글에서는 Raspberry Pi zero W (이하 RPI zero)에 IO 모듈을 연결하여 이더넷을 추가하는 방법을 정리해 본다.
 
-사용 제품은 WIZnet의 WIZ850IO 라는 모듈로, 이더넷 칩인 W5500과 RJ45 커넥터를 포함하고 있다.
+사용 제품은 WIZnet의 WIZ850io 라는 모듈로, 이더넷 칩인 W5500 기반이며 RJ45 커넥터를 포함하고 있다.
 
 <img src="https://wizwiki.net/wiki/lib/exe/fetch.php?media=products:wiz850io:wiz850io.png" width="30%" />
 
 W5500은 hardwired TCP/IP가 내장된 이더넷 컨트롤러 칩으로, SPI 통신을 지원한다. 임베디드 시스템 등에 쉽게 인터넷 연결을 추가할 수 있도록 도와준다.
 
-WIZ850IO 모듈의 상세 정보는 아래 링크에서 확인할 수 있다.
+WIZ850io 모듈의 상세 정보는 아래 링크에서 확인할 수 있다.
 
 - [WIZwiki - WIZ850io](https://wizwiki.net/wiki/doku.php?id=products:wiz850io:start)
-- [WIZ850IO 구매처](http://shop.wiznet.co.kr/front/contents/product/view.asp?cateid=48&pid=1263){:target="\_blank"}
+- [WIZ850io 구매처](http://shop.wiznet.co.kr/front/contents/product/view.asp?cateid=48&pid=1263){:target="\_blank"}
 
-RPI zero에 SPI 인터페이스를 통해 WIZ850IO 모듈을 연결하여 이더넷을 추가할 것이다. 이더넷을 추가하면, 무선랜(WiFi)보다 안정적이고 빠르게 인터넷을 사용할 수 있다.
+RPI zero에 SPI 인터페이스를 통해 WIZ850io 모듈을 연결하여 이더넷을 추가할 것이다. 이더넷을 추가하면, 무선랜(WiFi)보다 안정적으로 인터넷을 사용할 수 있다.
 
 아래 그림은 각 네트워크(WiFi / Ethernet)에 대해 연결된 공유기로 ping을 날려 본 결과이다.
 
@@ -34,7 +30,7 @@ RPI zero에 SPI 인터페이스를 통해 WIZ850IO 모듈을 연결하여 이더
 | ![](/files/wlan_vs_eth-01.png) | ![](/files/wlan_vs_eth-02.png) |
 
 
-이는 환경에 따라 달라질 수 있지만 속도와 안정성의 차이를 확인할 수 있는 정도는 된다고 생각한다.
+이는 환경에 따라 달라질 수 있지만 안정성의 차이를 확인할 수 있는 정도는 된다고 생각한다.
 
 그럼 본격적으로 설정을 시작해 보자.
 
@@ -64,16 +60,16 @@ Raspbian은 커널 호환 테스트 문제로 최신 버전이 아닌 2018-03-13
 
 ### Pin 연결
 
-아래는 RPI zero와 WIZ850IO의 pin 연결 정보이다.
+아래는 RPI zero와 WIZ850io의 pin 연결 정보이다.
 
 각각의 Pinmap은 다음 링크에서 확인할 수 있다.
 RPI zero의 경우 방향이 헷갈릴 수 있는데, micro sd card 슬롯이 있는 쪽부터 1번이라고 보면 된다.
 
-- [WIZ850IO specification](https://wizwiki.net/wiki/doku.php?id=products:wiz850io:start){:target="\_blank"}
+- [WIZ850io specification](https://wizwiki.net/wiki/doku.php?id=products:wiz850io:start){:target="\_blank"}
 - [Raspberry Pi pinout](https://pinout.xyz/){:target="\_blank"}
 
 
-| RPI zero       | WIZ850IO |
+| RPI zero       | WIZ850io |
 | -------------- | -------- |
 | 6 (GND)        | GND      |
 | 1 (3.3V)       | 3.3V     |
@@ -85,9 +81,9 @@ RPI zero의 경우 방향이 헷갈릴 수 있는데, micro sd card 슬롯이 �
 | 24 (SPI0_CE0)  | SCNn     |
 
 
-Pin을 모두 연결하면 이런 모습이 된다.
+Pin을 모두 연결하면 아래 사진과 같은 모습이 된다.
 
-![Raspberry Pi Zero W - WIZ850IO](/files/rpi-zero-with-wiz850io_1.jpg){: width="50%"}
+![Raspberry Pi Zero W - WIZ850io](/files/rpi-zero-with-wiz850io_1.jpg){: width="50%"}
 
 ----
 
@@ -97,7 +93,7 @@ Raspberry pi를 위한 커널 컴파일 방법은 아래 링크에 잘 설명되
 
 - [Raspberry Pi kernel build](https://www.raspberrypi.org/documentation/linux/kernel/building.md){:target="\_blank"}
 
-여기에서는 RPI zero를 위한 cross compile 방법을 간략히 정리한다.
+이 글에서는 RPI zero를 위한 cross compile 방법을 간략히 정리한다.
 
 Cross compile을 진행할 ubuntu 환경에서 다음 과정을 진행한다.
 
@@ -124,15 +120,14 @@ $ source ~/.bashrc
 # 특정 버전 download
 git clone --depth=1 --branch rpi-4.9.y https://github.com/raspberrypi/linux
 
-# 최신 버전 download
+# (참고) Latest version download
 git clone --depth=1 https://github.com/raspberrypi/linux
 ```
 
 #### Kernel configuration (for RPI zero)
 
-커널 configuration 및 W5500 드라이버를 위한 menuconfig 설정을 진행한다.
+다운로드가 완료되었으면, 커널 configuration 및 W5500 드라이버를 위한 menuconfig 설정을 진행한다.
 
-![menuconfig 화면](/files/rpi-zero-menuconfig_1.png)
 
 ```
 $ cd linux
@@ -142,6 +137,8 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bcmrpi_defconfig
 # W5500 driver 설정
 $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 ```
+
+![menuconfig 화면](/files/rpi-zero-menuconfig_1.png)
 
 ![menuconfig 검색 창](/files/rpi-zero-menuconfig_2.png)
 
@@ -182,10 +179,12 @@ $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs -j4
 
 우리가 사용할 커널 이미지와 모듈은 각각 다음 경로에 생성된다. 아래 파일들을 raspberry pi로 복사해야 한다.
 
-- Kernel image: linux/arch/arm/boot/zImage
-- modules: linux/drivers/net/ethernet/wiznet/w5100.ko & w5100-spi.ko
+- Kernel image: 
+    - linux/arch/arm/boot/zImage
+- modules: 
+    - linux/drivers/net/ethernet/wiznet/w5100.ko & w5100-spi.ko
 
-sd card를 이용해 직접 복사하는 방법도 있지만, 여기에서는 파일 개수가 많지 않기 때문에 scp라는 파일 전송 툴을 이용하기로 한다.
+sd card를 이용해 직접 복사하는 방법도 있지만, 여기에서는 파일 개수가 많지 않기 때문에 **scp**라는 파일 전송 툴을 이용하기로 한다.
 이 때 RPI zero와 PC 간 통신이 가능한 상태여야 한다.
 
 아래 명령어를 사용해 파일을 복사하자.
@@ -195,5 +194,5 @@ $ scp arch/arm/boot/zImage pi@<RPI zero IP address>:/home/pi
 $ scp drivers/net/ethernet/wiznet/*ko pi@<RPI zero IP address>:/home/pi
 ```
 
-다음 글에서 Device tree 작성 및 적용, 테스트 까지 진행해 본다.
+여기까지 글을 마무리 하고, 다음 글에서 Device tree 작성 및 적용, 테스트 까지 진행해 본다.
 

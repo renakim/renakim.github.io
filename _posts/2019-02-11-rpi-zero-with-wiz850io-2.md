@@ -1,12 +1,12 @@
 ---
 layout: posts
-title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850IO (2)"
+title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850io (2)"
 categories: RaspberryPi
 date: 2019-02-11
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---
 
-지난 글 [[RaspberryPi zero W] 이더넷 추가 with WIZ850IO (1)]({{ site.baseurl }}{% post_url 2019-01-29-rpi-zero-with-wiz850io-1 %})에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
+지난 글 [[RaspberryPi zero W] 이더넷 추가 with WIZ850io (1)]({{ site.baseurl }}{% post_url 2019-01-29-rpi-zero-with-wiz850io-1 %})에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
 
 - ~~RPI zero 초기 설정~~
   - ~~이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/2019/01/23/rpi-zero-w-start/)~~
@@ -174,6 +174,6 @@ ping이 잘 되는 것을 확인 할 수 있다.
 
 ---
 
-여기까지 W5500기반의 WIZ850IO 모듈을 이용하여 RPI zero에 이더넷을 추가해 보았다.
+여기까지 W5500기반의 WIZ850io 모듈을 이용하여 RPI zero에 이더넷을 추가해 보았다.
 
 다음 글에서 dts 파일의 SPI 속도를 변경해 보고, 변경이 잘 되었는지 iperf로 속도 변화 테스트를 진행한 내용을 정리해 보겠다.
