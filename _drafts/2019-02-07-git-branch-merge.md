@@ -10,18 +10,18 @@ tags: [git, branch, merge]
 
 ## branch 생성 및 checkout
 
-\$ git checkout -b iss53
+```
+$ git checkout -b iss53
 
 위 명령은 아래 두 명령을 합친 것과 같다.
-
-\$ git branch iss53
-
-\$ git checkout iss53
+$ git branch iss53
+$ git checkout iss53
+```
 
 ## 수정 후 commit...완료 후 master로 전환
 
-git add...git commit...
-git checkout master
+    $ git add...git commit...
+    $ git checkout master
 
 ## Merge branch
 

@@ -6,7 +6,7 @@ date: 2019-02-11
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---
 
-지난 글 [[RaspberryPi zero W] 이더넷 추가 with WIZ850IO (1)]()에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
+지난 글 [[RaspberryPi zero W] 이더넷 추가 with WIZ850IO (1)]({{ site.baseurl }}{% post_url 2019-01-29-rpi-zero-with-wiz850io-1 %})에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
 
 - ~~RPI zero 초기 설정~~
   - ~~이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/2019/01/23/rpi-zero-w-start/)~~
@@ -23,10 +23,8 @@ tags: [raspberrypi, rpizero, wiz850io, w5500]
 RPI zero의 홈 디렉토리에 들어가 보면 zImage와 w5100.ko, w5100-spi.ko 파일이 있을 것이다.
 아래 명령으로 확인하자.
 
-```
-$ cd
-$ ls -al
-```
+    $ cd
+    $ ls -al
 
 커널 적용 방법은 두 가지로, 어느 방법으로 진행해도 무방하다.
 
@@ -46,17 +44,13 @@ $ sudo reboot
 
 부팅이 완료되면, 다음 명령어를 이용해 새 커널로 적용되었는지 확인해 본다.
 
-```
-$ uname -r
-```
+    $ uname -r
 
 #### 기존 커널을 유지하고 config.txt에서 추가하는 방법
 
 기존 커널을 그대로 두고 새로운 이름의 커널을 /boot/config.txt 에서 직접 지정해도 된다.
 
-```
-$ mv zImage kernel_w5500.img
-```
+    $ mv zImage kernel_w5500.img
 
 새 이미지를 /boot/ 폴더로 복사 후, config.txt에서 파일명을 지정해 준다.
 
@@ -172,7 +166,7 @@ $ sudo insmod w5100-spi.ko
 
 같은 대역의 PC로 ping을 날려 보았다.
 
-\$ ping 192.168.50.80
+    $ ping 192.168.50.80
 
 ![new eth](/files/rpi-zero-with-wiz850io_ping.png)
 
