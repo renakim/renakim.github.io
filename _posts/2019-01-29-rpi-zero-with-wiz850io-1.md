@@ -20,12 +20,23 @@ tags:
 
 W5500은 hardwired TCP/IP가 내장된 이더넷 컨트롤러 칩으로, SPI 통신을 지원한다. 임베디드 시스템 등에 쉽게 인터넷 연결을 추가할 수 있도록 도와준다.
 
-RPI zero에 SPI 인터페이스를 통해 WIZ850IO 모듈을 연결하여 이더넷을 추가할 것이다. 이더넷을 추가하면, 무선랜(WiFi)보다 안정적으로 인터넷을 사용할 수 있다.
-
 WIZ850IO 모듈의 상세 정보는 아래 링크에서 확인할 수 있다.
 
 - [WIZwiki - WIZ850io](https://wizwiki.net/wiki/doku.php?id=products:wiz850io:start)
 - [WIZ850IO 구매처](http://shop.wiznet.co.kr/front/contents/product/view.asp?cateid=48&pid=1263){:target="\_blank"}
+
+RPI zero에 SPI 인터페이스를 통해 WIZ850IO 모듈을 연결하여 이더넷을 추가할 것이다. 이더넷을 추가하면, 무선랜(WiFi)보다 안정적이고 빠르게 인터넷을 사용할 수 있다.
+
+아래 그림은 각 네트워크(WiFi / Ethernet)에 대해 연결된 공유기로 ping을 날려 본 결과이다.
+
+| 무선랜(WiFi: wlan0)만 사용 시         | 유선랜(ethernet: eth0)만 사용 시      |
+| ------------------------------ | ------------------------------ |
+| ![](/files/wlan_vs_eth-01.png) | ![](/files/wlan_vs_eth-02.png) |
+
+
+이는 환경에 따라 달라질 수 있지만 속도와 안정성의 차이를 확인할 수 있는 정도는 된다고 생각한다.
+
+그럼 본격적으로 설정을 시작해 보자.
 
 ---
 
