@@ -6,14 +6,12 @@ date: 2019-02-07
 tags: [git, branch, merge]
 ---
 
----
-
 ## branch 생성 및 checkout
 
 ```
 $ git checkout -b iss53
 
-위 명령은 아래 두 명령을 합친 것과 같다.
+# 위 명령은 아래 두 명령을 합친 것과 같다. branch를 만들고, 새로 만든 브랜치로 변경한다.
 $ git branch iss53
 $ git checkout iss53
 ```
