@@ -1,19 +1,30 @@
 ---
 layout: posts
-title: "BLE to Internet projects"
+title: "BLE gateway projects for IoT"
 categories: IoT
 date: 2019-03-04
 tags: [ble, gateway, wiznet, iot]
 ---
 
-## BLE gateway
+[## BLE gateway
 
 곳곳에 있는 센서들의 데이터를 수집하고 누적 저장하기 위해서는 게이트웨이가 필수적이다.
 
 - BLE to TCP
   - BLE to ethernet
   - BLE to WiFi
--
+-](## Internet of Things
+
+IoT(Internet of Things), 즉 사물 인터넷은 위키백과에 따르면 '각종 사물에 센서와 통신 기능을 내장하여 인터넷에 연결하는 기술, 즉 무선 통신을 통해 각종 사물을 연결하는 기술' 이다.
+
+- [위키백과: 사물인터넷](https://ko.wikipedia.org/wiki/%EC%82%AC%EB%AC%BC%EC%9D%B8%ED%84%B0%EB%84%B7)
+
+기본적으로 사물마다 내장된 센서들로부터 데이터를 수집하고, 수집한 데이터를 저장하며 나아가 클라우드 연동까지 하게 되는데
+데이터를 수집하기 위해서는 사물(Things)로부터 데이터를 받아 인터넷으로 보내줄 수 있는 게이트웨이(gateway)가 필수적이다.
+
+본 글에서는 대표적인 근거리 무선 통신 기술인 BLE를 기반으로 한 제품들과 프로젝트를 살펴보고자 한다.
+
+(BLE는 Bluetooth Low Energy의 약자로 Bluetooth 4.0 이후로 배포되는 저전력 블루투스 기술을 뜻한다.))
 
 ---
 
@@ -32,7 +43,7 @@ WIZnet의 Hardware TCP/IP Chip인 W5500과 Wi-Fi 모듈인 WizFi310, 그리고 N
 
 ### iNode series
 
-iNode 제품 시리즈 중 BLE
+iNode 시리즈 중 BLE gateway 기능을 하는 세 가지 제품을 소개한다.
 
 #### iNode LAN
 
