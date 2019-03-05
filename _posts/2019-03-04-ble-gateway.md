@@ -40,7 +40,7 @@ BLE gateway 기능을 제공하는 iNode의 LAN 시리즈를 소개한다.
 
 <img src="https://wiznetmuseum.com/wp/wp-content/uploads/2019/02/iNode_LAN_71_1200.jpg">
 
-iNode LAN은 이더넷 프로토콜을 사용하는 네트워크에서 iNode Bluetooth BLE 장치에 대한 액세스를 제공한다. 이 모듈을 사용하면 건물 내 iNode Care Sensor 센서의 범위를 늘리거나 iNode Nav의 움직임을 온라인으로 추적 할 수 있다. 
+iNode LAN은 이더넷 프로토콜을 사용하는 네트워크에서 iNode Bluetooth BLE 장치에 대한 액세스를 제공한다. 이 모듈을 사용하면 건물 내 iNode Care Sensor 센서의 범위를 늘리거나 iNode Nav의 움직임을 온라인으로 추적 할 수 있다.
 
 iNode LAN Duo 또한 IP 프로토콜 네트워크(LAN, WiFi 및 인터넷)에서 BLE 장치(Bluetooth Smart, IoT-Internet of Things)에 대한 엑세스를 제공하며, Bluetooth 2.1 리시버를 포함하고 있는것이 특징이다.
 
@@ -49,7 +49,6 @@ iNode LAN 시리즈는 모두 web configuration 환경을 제공한다. Bluetoot
 추가 정보는 아래 링크를 통해 확인하자.
 
 - [iNode LAN introduction](https://wiznetmuseum.com/portfolio-items/inode-lan-bluetooth-gateway/)
-
 
 #### iNode LAN Camera
 
@@ -73,6 +72,8 @@ https://wiznetmuseum.com/portfolio-items/ble-to-ethernet-thin-gateway/
 
 ### Telemedicine by using WIZwiki-W7500 and BLE
 
+WIZnet의 WIZwiki-W7500 platform board와 nRF51822-mKIT를 사용하여 BLE 데이터를 네트워크로 보내는 프로젝트이다.
+
 <img src="https://cdn.instructables.com/FJZ/OEAV/IB8J0RW2/FJZOEAVIB8J0RW2.LARGE.jpg?auto=webp&width=400">
 
-- [View more: Telemedicine by using WIZwiki-W7500 and BLE](https://wiznetmuseum.com/portfolio-items/telemedicine-by-using-wizwiki-w7500-and-ble/)
+- [More detail: Telemedicine by using WIZwiki-W7500 and BLE](https://wiznetmuseum.com/portfolio-items/telemedicine-by-using-wizwiki-w7500-and-ble/)

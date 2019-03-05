@@ -50,9 +50,7 @@ iNode LAN Duos allows the existence of BLE devices (Bluetooth Smart, IoT-Interne
 - any web browser
 - built-in iNode Monitor (JavaScript/WebSocket/HTML5 application)
 
-
-- [iNode LAN introduction](https://wiznetmuseum.com/portfolio-items/inode-lan-bluetooth-gateway/)
-
+* [iNode LAN introduction](https://wiznetmuseum.com/portfolio-items/inode-lan-bluetooth-gateway/)
 
 #### iNode LAN Camera
 
@@ -80,6 +78,8 @@ BLE to Ethernet Thin Gateway is the data collecor to transmit the BLE(Bluetooth 
 https://wiznetmuseum.com/portfolio-items/ble-to-ethernet-thin-gateway/
 
 ### Telemedicine by using WIZwiki-W7500 and BLE
+
+It is a project to send BLE data to the network using WIZnet's WIZwiki-W7500 platform board and nRF51822-mKIT.
 
 <img src="https://cdn.instructables.com/FJZ/OEAV/IB8J0RW2/FJZOEAVIB8J0RW2.LARGE.jpg?auto=webp&width=400">
 
