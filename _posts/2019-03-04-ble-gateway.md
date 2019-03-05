@@ -34,32 +34,28 @@ WIZnet의 Hardware TCP/IP Chip인 W5500과 Wi-Fi 모듈인 WizFi310, 그리고 N
 
 ### iNode series
 
-iNode 시리즈 중 BLE gateway 기능을 포함하는 세 가지 제품을 소개한다.
-
+BLE gateway 기능을 제공하는 iNode의 LAN 시리즈를 소개한다.
 
 #### iNode LAN & iNode LAN Duos
 
 <img src="https://wiznetmuseum.com/wp/wp-content/uploads/2019/02/iNode_LAN_71_1200.jpg">
 
-iNode LAN gives access to iNode Bluetooth BLE devices in networks with the Ethernet protocol. With this module you can increase the range of iNode Care Sensor sensors in the building or track on-line the movement of iNode Nav.
+iNode LAN은 이더넷 프로토콜을 사용하는 네트워크에서 iNode Bluetooth BLE 장치에 대한 액세스를 제공한다. 이 모듈을 사용하면 건물 내 iNode Care Sensor 센서의 범위를 늘리거나 iNode Nav의 움직임을 온라인으로 추적 할 수 있다. 
 
-iNode LAN Duos allows the existence of BLE devices (Bluetooth Smart, IoT-Internet of Things) in the IP protocol networks: LAN, Wi-Fi and the Internet. Additionaly it contains a BT2.1 receiver.
+iNode LAN Duo 또한 IP 프로토콜 네트워크(LAN, WiFi 및 인터넷)에서 BLE 장치(Bluetooth Smart, IoT-Internet of Things)에 대한 엑세스를 제공하며, Bluetooth 2.1 리시버를 포함하고 있는것이 특징이다.
 
-- CSR 1011
-- W5500
+iNode LAN 시리즈는 모두 web configuration 환경을 제공한다. Bluetooth 모드 설정, 네트워크 설정, 원격 펌웨어 업데이트 등을 지원한다.
 
-- any web browser
-- built-in iNode Monitor (JavaScript/WebSocket/HTML5 application)
-
+추가 정보는 아래 링크를 통해 확인하자.
 
 - [iNode LAN introduction](https://wiznetmuseum.com/portfolio-items/inode-lan-bluetooth-gateway/)
 
 
 #### iNode LAN Camera
 
-<img src="https://inode.pl/images/inode/0-1000/iNode-LAN-Camera_%5B181%5D_1200.jpg?&width=300">
+<img src="https://inode.pl/images/inode/0-1000/iNode-LAN-Camera_%5B181%5D_1200.jpg" width="300">
 
-iNode LAN Camera is a combination of 5MPx camera with JPEG compression and with full BLE functionality (Bluetooth Smart, IoT:Internet of Things). Using the iNode LAN Camera you can easily associate the user identifier iNode Beacon with a recorded image (access control) or start recording when for example iNode Care Sensor #1 raises alarm associated with the opening of the door to the room or sensor iNode Care #5 detects vehicle in front of the gate.
+iNode LAN 카메라는 5MPx 카메라와 JPEG compression 및 BLE의 조합으로 구성되어 있다. iNode LAN Camera와 iNode sensor 시리즈를 연동하여 움직임을 감지할 때 사진을 찍거나 경보음을 울리는 등의 동작을 할 수 있다.
 
 ---
 
@@ -67,12 +63,7 @@ iNode LAN Camera is a combination of 5MPx camera with JPEG compression and with 
 
 ### BLE to Ethernet Thin Gateway
 
-BLE to Ethernet Thin Gateway is the data collecor to transmit the BLE(Bluetooth Low Eneregy) data to a cloud server through Ethernet.
-
-- Nordic nRF51822
-  - Multi-protocol Bluetooth® 4.0 low energy/2.4GHz RF SoC
-- WIZnet W5500
-  - Supports following Hardwired TCP/IP Protocols : TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE
+BLE to Ethernet Thin Gateway는 BLE(Bluetooth Low Energy)데이터를 이더넷을 통해 클라우드 서버로 전송하는 데이터 수집 프로젝트이다.
 
 <img src="https://wiznetmuseum.com/wp/wp-content/uploads/2016/02/ble_gateway-1.jpg">
 
