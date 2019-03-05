@@ -6,7 +6,7 @@ date: 2019-02-20
 tags: [docker, docker-compose, wordpress]
 ---
 
-원글: [Docker docs: Quickstart: Compose and WordPress](https://docs.docker.com/compose/wordpress/)
+참조: [Docker docs: Quickstart: Compose and WordPress](https://docs.docker.com/compose/wordpress/)
 
 ## Docker
 
