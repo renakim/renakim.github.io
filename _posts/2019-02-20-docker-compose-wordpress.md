@@ -136,7 +136,9 @@ docker-compose -up 명령으로 프로젝트를 시작한다.
 $ docker-compose up -d
 ```
 
-이제 **localhost:8000** 주소로 접속하면, workpress 설정을 시작할 수 있다.
+이제 **localhost:8000** 주소로 접속하면, 다음과 같이 wordpress 설정을 시작할 수 있다.
+
+<img src="https://docs.docker.com/compose/images/wordpress-lang.png">
 
 참고로 도커로 실행된 프로그램의 데이터는 volume이라는 컨테이너 데이터 저장소에 저장되며, 다음 글에서 volume 백업, 설정 등에 대한 내용을 다뤄 볼 예정이다.
 
