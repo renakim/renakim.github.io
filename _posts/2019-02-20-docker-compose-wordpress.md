@@ -139,9 +139,9 @@ $ docker-compose up -d
 이제 **localhost:8000** 주소로 접속하면, 다음과 같이 wordpress 초기 설정을 진행할 수 있다.
 VM 환경에서 진행했다면 localhost 대신 VM IP를 입력하면 된다.
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/docker-wordpress-install_1.png">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/docker-wordpress-install_1.png?raw=true">
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/docker-wordpress-install_2.png">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/docker-wordpress-install_2.png?raw=true">
 
 참고로 도커로 실행된 프로그램의 데이터는 volume이라는 컨테이너 데이터 저장소에 저장되며, 다음 글에서 volume 백업, 설정 등에 대한 내용을 다뤄 볼 예정이다.
 
