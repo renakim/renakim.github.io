@@ -5,6 +5,15 @@ author: rena
 baseurl: "/"
 url: "https://renakim.github.io"
 
+# comments
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "renablog"
+
+# disqus
+# discus-identifier: "renablog"
+
 # Social Profiles
 twitter_username: chalsu_
 github_username: renakim
@@ -14,6 +23,7 @@ github_username: renakim
 markdown: kramdown
 paginate: 5
 paginate_path: "/posts/page:num/"
+permalink: "/:year/:month/:day/:title/"
 plugins:
   - jekyll-feed
   - jekyll-paginate

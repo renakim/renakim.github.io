@@ -4,6 +4,7 @@ title: "[RaspberryPi zero W] headless 초기 설정"
 categories: RaspberryPi
 date: 2019-01-23
 tags: [raspberrypi, rpizero, headless, wlan]
+comments: true
 ---
 
 **Raspberry Pi zero W**(이하 RPI zero)를 사용해 볼 기회가 생겼다.
