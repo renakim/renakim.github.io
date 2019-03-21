@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "IoT를 위한 BLE gateway 프로젝트 살펴보기"
 categories: IoT
 date: 2019-03-04
