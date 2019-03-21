@@ -6,9 +6,9 @@ baseurl: "/"
 url: "https://renakim.github.io"
 
 # Social Profiles
-twitter_username: SBootstrap
-github_username: BlackrockDigital
-facebook_username: StartBootstrap
+twitter_username: chalsu_
+github_username: renakim
+# facebook_username: kyi8907
 
 # Build settings
 markdown: kramdown
