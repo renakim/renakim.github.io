@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "[RaspberryPi zero W] headless 초기 설정"
 categories: RaspberryPi
 date: 2019-01-23

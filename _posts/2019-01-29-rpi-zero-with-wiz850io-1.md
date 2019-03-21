@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850io (1)"
 categories: RaspberryPi
 date: 2019-01-29 00:00
