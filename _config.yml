@@ -6,10 +6,7 @@ baseurl: "/"
 url: "https://renakim.github.io"
 
 # comments
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "renablog"
+disqusShortname: "renablog"
 
 # disqus
 # discus-identifier: "renablog"
