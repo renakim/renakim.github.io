@@ -18,6 +18,7 @@ github_username: renakim
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 paginate: 5
 paginate_path: "/posts/page:num/"
 permalink: "/:year/:month/:day/:title/"
