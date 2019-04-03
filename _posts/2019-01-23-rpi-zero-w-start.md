@@ -5,6 +5,7 @@ categories: RaspberryPi
 date: 2019-01-23
 tags: [raspberrypi, rpizero, headless, wlan]
 comments: true
+background: "/files/rpizerow_board.jpg"
 ---
 
 **Raspberry Pi zero W**(이하 RPI zero)를 사용해 볼 기회가 생겼다.

@@ -4,6 +4,7 @@ title: "[Google Cloud] Compute Engine - VM instance FTP 설정"
 categories: Docker
 date: 2019-03-08
 tags: [gcp, vm instance, puttygen, ftp, filezilla]
+background: "/files/gcp-metadata-2.png"
 ---
 
 Google Cloud Platform(이하 GCP) 기반 Compute Engine 서비스에서 VM 인스턴스로 서버를 구축해 사용하고 있다.
