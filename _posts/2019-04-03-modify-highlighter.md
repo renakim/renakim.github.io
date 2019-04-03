@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[Jekyll] 테마 수정"
+title: "[Jekyll] Clean blog theme code highlight 추가"
 categories: Jekyll
 date: 2019-04-03
 tags: [jekyll, cleanblog]
 ---
 
-## Code highlighting
+## Code highlight 문제
 
 처음 Github pages로 블로그를 만들었을 때 minimal-mistake 테마를 사용하다가 너무 단순하고 추후 수정이 어려울 것 같아 Clean blog theme 로 변경을 했는데, code highlighting이 적용되지 않았다.
 
