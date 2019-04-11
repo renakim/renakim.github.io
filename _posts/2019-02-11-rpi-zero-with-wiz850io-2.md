@@ -78,52 +78,7 @@ Device tree overlay는 사용 목적에 따라 여러 형태로 기술될 수 �
 
 다음은 W5500을 위한 device tree overlay 작성 예시이다.
 
-```
-$ vi w5500-overlay.dts
-
-/dts-v1/;
-/plugin/;
-
-/ {
-    compatible = "brcm,bcm2835";
-    fragment@0 {
-        target = <&spi0>;
-        __overlay__ {
-            #address-cells = <1>;
-            #size-cells = <0>;
-
-            status = "okay";
-
-            spidev@0 {
-                status = "disabled";
-            };
-            spidev@1 {
-                status = "disabled";
-            };
-        };
-    };
-
-    fragment@1 {
-        target = <&spi0>;
-        __overlay__ {
-            #address-cells = <1>;
-            #size-cells = <0>;
-
-            status = "okay";
-
-            w5500@1 {
-                compatible = "wiznet,w5500";
-                reg = <0>;
-                spi-max-frequency = <10000000>;
-                mac-address = [00 08 DC 01 02 03];
-                interrupts = <22 0x8>;
-                interrupt-parent = <&gpio>;
-                status = "okay";
-            };
-        };
-    };
-};
-```
+<script src="https://gist.github.com/renakim/60c4a86ac76520b694ccd377ce3ad007.js"></script>
 
 dts 파일 작성이 완료되었으면, dtc를 이용해 컴파일한 뒤 /boot/overlay 폴더에 복사한다.
 
