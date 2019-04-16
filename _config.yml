@@ -12,9 +12,7 @@ disqusShortname: "renablog"
 # discus-identifier: "renablog"
 
 # Social Profiles
-twitter_username: chalsu_
 github_username: renakim
-# facebook_username: kyi8907
 
 # Build settings
 markdown: kramdown
