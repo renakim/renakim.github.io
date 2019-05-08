@@ -14,3 +14,4 @@ node_modules
 npm-debug.log*
 *old*
 nstall-dependencies
+package-lock.json
