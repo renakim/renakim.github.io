@@ -23,3 +23,5 @@ permalink: "/:year/:month/:day/:title/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+
+encoding: utf-8
