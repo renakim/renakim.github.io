@@ -13,7 +13,8 @@ tags: [raspberrypi]
 
 초기 설정 시 패키지 업데이트를 위해 apt-get update를 수행하는데, 자꾸 아래와 같은 에러가 발생하면서 정상 수행이 되지 않았다.
 
-<추가> apt-get update는 잘 수행되더라도 apt-get upgrade에서 문제가 발생할 수도 있다.
+* 추가: apt-get update는 잘 수행되더라도 apt-get upgrade에서 문제가 발생할 수도 있다.
+
 
 ```
 Hit:1 http://archive.raspberrypi.org/debian stretch InRelease       
