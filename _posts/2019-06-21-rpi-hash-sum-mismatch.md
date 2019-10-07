@@ -64,7 +64,9 @@ Hash Sum mismatch 라는 문구가 눈에 띄어 검색해보니 내용이 많�
 
 설정 파일의 기존 라인을 복사한 다음 주석처리 하고, 링크 부분만 변경해 주었다.
 
-```http://raspbian.raspberrypi.org/raspbian/  ==>  http://mirror.premi.st/raspbian/raspbian/
+```
+http://raspbian.raspberrypi.org/raspbian/  ==>  http://mirror.premi.st/raspbian/raspbian/
+```
 
 ```
 $ sudo vi /etc/apt/sources.list
