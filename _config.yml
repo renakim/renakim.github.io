@@ -1,27 +1,38 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink: pretty
+# relative_permalinks: true
+
+# Setup
 title: Developer
-email: rena@wiznet.io
-description: story
-author: rena
-baseurl: "/"
-url: "https://renakim.github.io"
+tagline: ":)"
+description: "Developer Story"
+url: https://renakim.github.io
+baseurl: ""
+paginate: 5
 
-# comments
-disqusShortname: "renablog"
+# Comments
+comments:
+  provider: disqus
+disqus:
+  shortname: renablog
 
-# disqus
-# discus-identifier: "renablog"
+category_dir: category/
+tag_dir: tag/
+
+# About/contact
+author:
+  name: Mark Otto
+  url: https://renakim.github.io
+  email: rena@wiznet.io
 
 # Social Profiles
 github_username: renakim
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-paginate: 5
-paginate_path: "/posts/page:num/"
-permalink: "/:year/:month/:day/:title/"
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-paginate
 
-encoding: utf-8
+# Custom vars
+version: 1.0.0

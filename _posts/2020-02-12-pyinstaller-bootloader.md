@@ -6,7 +6,6 @@ date: 2020-02-12
 tags: [python, pyinstaller]
 ---
 
-
 Python(pyqt5) 기반의 GUI Tool을 만들어서 사용할 때 pyinstaller로 생성한 exe 파일 다운로드 또는 실행 시 백신에 걸리는 문제가 종종 발생한다.
 
 이 문제에 대한 해결책을 검색하던 중 pyinstaller bootloader를 환경에 맞게 컴파일하여 사용하는 방법이 있다고 해서 시도해 봤다.
@@ -17,13 +16,12 @@ Python(pyqt5) 기반의 GUI Tool을 만들어서 사용할 때 pyinstaller로 �
 
 Pyinstaller는 version 3.5를 사용하다가 얼마 전 3.6 version이 릴리즈 되어 업데이트 후 사용 중이다.
 
-----
+---
 
 ## 환경
 
-* Windows 10 64bit 
-* Python 3.7.4
-
+- Windows 10 64bit
+- Python 3.7.4
 
 참고로 pip를 사용해서 pyinstaller를 설치한 경우, bootloader 이미지는 있으나 소스 코드는 포함되어 있지 않다고 한다.
 
@@ -54,14 +52,14 @@ drwxr-xr-x 1 Administrator 197121      0  2월 12 09:38 ../
 -rwxr-xr-x 1 Administrator 197121 278016  1월 29 11:20 runw_d.exe*
 ```
 
-----
+---
 
-## Build and install 
+## Build and install
 
 ### Download source package
 
 아래 링크에서 릴리즈 버전 별로 소스 코드를 다운로드 할 수 있다.
-https://github.com/pyinstaller/pyinstaller/releases 
+https://github.com/pyinstaller/pyinstaller/releases
 
 또는, git clone을 사용하여 최신 개발 버전 또는 원하는 commit 버전을 받아올 수 있다.
 
@@ -70,7 +68,6 @@ git clone https://github.com/pyinstaller/pyinstaller
 ```
 
 여기에서는 git clone을 이용해서 최신 커밋 버전을 다운로드 했다.
-
 
 ### Build
 
@@ -83,6 +80,7 @@ python ./waf distclean all
 ```
 
 (Log)
+
 ```
 'distclean' finished successfully (0.072s)
 'all' finished successfully (0.001s)
@@ -94,13 +92,15 @@ python ./waf distclean all
 'install_releasew' finished successfully (0.148s)
 ```
 
-
 ### Install
+
 ```
 cd ..
 python setup.py install
 ```
+
 (Log)
+
 ```
 running install
 running bdist_egg
@@ -130,7 +130,7 @@ Finished processing dependencies for PyInstaller==4.0.dev0+ga1f92c6a.mod
 
 pyinstaller 디렉토리 내 setup.py 파일을 사용하여 설치 까지 완료했다.
 
-----
+---
 
 ## 동작 확인
 
@@ -149,10 +149,10 @@ $ pyinstaller -v
 
 EXE 파일에 대한 테스트 방법에 대해서도 정리해 봐야겠다.
 
-----
+---
 
 # 참조 링크
 
-* [https://pythonhosted.org/PyInstaller/bootloader-building.html](https://pythonhosted.org/PyInstaller/bootloader-building.html){:target="\_blank"}
-* [https://stackoverflow.com/questions/43777106/program-made-with-pyinstaller-now-seen-as-a-trojan-horse-by-avg](https://stackoverflow.com/questions/43777106/program-made-with-pyinstaller-now-seen-as-a-trojan-horse-by-avg){:target="\_blank"}
-* [https://stackoverflow.com/questions/53584395/how-to-recompile-the-bootloader-of-pyinstaller](https://stackoverflow.com/questions/53584395/how-to-recompile-the-bootloader-of-pyinstaller){:target="\_blank"}
+- [https://pythonhosted.org/PyInstaller/bootloader-building.html](https://pythonhosted.org/PyInstaller/bootloader-building.html){:target="\_blank"}
+- [https://stackoverflow.com/questions/43777106/program-made-with-pyinstaller-now-seen-as-a-trojan-horse-by-avg](https://stackoverflow.com/questions/43777106/program-made-with-pyinstaller-now-seen-as-a-trojan-horse-by-avg){:target="\_blank"}
+- [https://stackoverflow.com/questions/53584395/how-to-recompile-the-bootloader-of-pyinstaller](https://stackoverflow.com/questions/53584395/how-to-recompile-the-bootloader-of-pyinstaller){:target="\_blank"}

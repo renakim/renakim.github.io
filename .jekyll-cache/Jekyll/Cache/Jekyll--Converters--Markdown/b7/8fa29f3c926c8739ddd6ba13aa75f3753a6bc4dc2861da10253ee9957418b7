@@ -1,0 +1,40 @@
+I"–<h2 id="linux-kernel">Linux kernel</h2>
+
+<p>While searching for the WIZnet W5500 linux driver, I noticed a W5500 update in the linux kernel github repository.</p>
+
+<p>Entering through the commit ID seems to have been updated since <strong>v5.2-rc3</strong>.</p>
+
+<ul>
+  <li>Link: <a href="https://github.com/torvalds/linux/tree/master/drivers/net/ethernet/wiznet" target="\_blank">Linux kernel (drivers/net/ethernet/wiznet)</a></li>
+</ul>
+
+<p>The commit comment is shown below, and the description shows that the device tree of w5x00 is supported.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net: ethernet: wiznet: w5X00 add device tree support
+
+The w5X00 chip provides an SPI to Ethernet inteface. This patch allows
+platform devices to be defined through the device tree.
+...
+</code></pre></div></div>
+
+<p>As the device tree support was added, the following document files were added.</p>
+
+<ul>
+  <li><a href="https://github.com/torvalds/linux/blob/master/Documentation/devicetree/bindings/net/wiznet%2Cw5x00.txt" target="\_blank">Documentation/devicetree/bindings/net/wiznet%2Cw5x00.txt</a></li>
+</ul>
+
+<p>The above file is a guide for writing DTS. It consists of descriptions and basic examples of property values to use W5x00.</p>
+
+<p>If you want to use the W5500 in a Linux environment, this is a good reference.</p>
+
+<hr />
+
+<h2 id="raspberry-pi-kernel">Raspberry Pi kernel</h2>
+
+<p>The kernel of Raspberry Pi is applied to the rpi-5.3.y branch. (There is no devicetree doc file in 5.2.y.)</p>
+
+<ul>
+  <li><a href="https://github.com/raspberrypi/linux/tree/rpi-5.3.y" target="\_blank">Github raspberrypi/linux:rpi-5.3.y</a></li>
+</ul>
+
+:ET
