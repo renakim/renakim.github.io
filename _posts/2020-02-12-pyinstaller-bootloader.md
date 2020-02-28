@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Pyinstaller] Bootloader compile"
-categories: python
+categories: Python
 date: 2020-02-12
 tags: [python, pyinstaller]
 ---
