@@ -9,7 +9,7 @@ title: Developer
 tagline: ":)"
 description: "Developer Story"
 url: https://renakim.github.io
-baseurl: "/"
+baseurl: ""
 paginate: 3
 
 # Comments
