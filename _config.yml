@@ -9,8 +9,8 @@ title: Developer
 tagline: ":)"
 description: "Developer Story"
 url: https://renakim.github.io
-baseurl: ""
-paginate: 5
+baseurl: "/"
+paginate: 3
 
 # Comments
 comments:
@@ -23,7 +23,7 @@ tag_dir: tag/
 
 # About/contact
 author:
-  name: Mark Otto
+  name: Rena Kim
   url: https://renakim.github.io
   email: rena@wiznet.io
 
@@ -31,8 +31,7 @@ author:
 github_username: renakim
 
 plugins:
-  # - jekyll-feed
   - jekyll-paginate
 
 # Custom vars
-version: 1.0.0
+version: 1.0.1
