@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "[PyQT5] Qt Designer를 이용한 GUI 구성하기"
 categories: Docker
 date: 2019-02-21

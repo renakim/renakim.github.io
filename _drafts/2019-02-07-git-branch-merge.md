@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "[Git] Git branch/merge"
 categories: Git
 date: 2019-02-07

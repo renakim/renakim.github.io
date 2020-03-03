@@ -59,7 +59,8 @@ drwxr-xr-x 1 Administrator 197121      0  2월 12 09:38 ../
 ### Download source package
 
 아래 링크에서 릴리즈 버전 별로 소스 코드를 다운로드 할 수 있다.
-https://github.com/pyinstaller/pyinstaller/releases
+
+* [https://github.com/pyinstaller/pyinstaller/releases](https://github.com/pyinstaller/pyinstaller/releases)
 
 또는, git clone을 사용하여 최신 개발 버전 또는 원하는 commit 버전을 받아올 수 있다.
 

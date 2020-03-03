@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "BLE gateway projects for IoT"
 categories: IoT
 date: 2019-03-04
