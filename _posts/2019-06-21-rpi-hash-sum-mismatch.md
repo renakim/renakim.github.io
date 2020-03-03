@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "[RaspberryPi] Hash Sum mismatch 에러"
-categories: raspberrypi
+categories: RaspberryPi
 date: 2019-06-21
 tags: [raspberrypi]
 ---
-
 
 ## Hash Sum mismatch 문제 발생
 
@@ -13,14 +12,13 @@ tags: [raspberrypi]
 
 초기 설정 시 패키지 업데이트를 위해 apt-get update를 수행하는데, 자꾸 아래와 같은 에러가 발생하면서 정상 수행이 되지 않았다.
 
-* 추가: apt-get update는 잘 수행되더라도 apt-get upgrade에서 문제가 발생할 수도 있다.
-
+- 추가: apt-get update는 잘 수행되더라도 apt-get upgrade에서 문제가 발생할 수도 있다.
 
 ```
-Hit:1 http://archive.raspberrypi.org/debian stretch InRelease       
-Get:2 http://mirrordirector.raspbian.org/raspbian stretch InRelease [15.0 kB]            
+Hit:1 http://archive.raspberrypi.org/debian stretch InRelease
+Get:2 http://mirrordirector.raspbian.org/raspbian stretch InRelease [15.0 kB]
 Get:3 http://mirrordirector.raspbian.org/raspbian stretch/main armhf Packages [11.7 MB]
-Err:3 http://mirrordirector.raspbian.org/raspbian stretch/main armhf Packages                                              
+Err:3 http://mirrordirector.raspbian.org/raspbian stretch/main armhf Packages
   Hash Sum mismatch
   Hashes of expected file:
    - Filesize:11663116 [weak]
@@ -46,15 +44,13 @@ Hash Sum mismatch 라는 문구가 눈에 띄어 검색해보니 내용이 많�
 
 해결 방법은 Raspbian mirror 링크를 변경해 주는 것이다.
 
-
 ### Raspbian Mirror
 
-먼저 아래 링크에 접속해서 변경할 새 mirror 링크를 찾는다. 
+먼저 아래 링크에 접속해서 변경할 새 mirror 링크를 찾는다.
 링크는 지역 별로 있어서 적절히 가까운 지역으로 선택하면 되는 듯하다.
 나는 South Korea 지역 링크 중 하나를 선택했다.
 
 - [Raspbian Mirror List](http://www.raspbian.org/RaspbianMirrors)
-
 
 ---
 
@@ -80,9 +76,8 @@ deb http://mirror.premi.st/raspbian/raspbian/ stretch main contrib non-free rpi
 
 다시 apt-get update 명령을 수행하니 잘 된다.
 
-----
+---
 
 ## Reference
 
-* 참고 링크: [Raspberry Pi Forum: [Solved] PiVPN and Updates missing](https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=242541&p=1479291&hilit=mismatch#p1479291)
-
+- 참고 링크: [Raspberry Pi Forum: [Solved] PiVPN and Updates missing](https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=242541&p=1479291&hilit=mismatch#p1479291)
