@@ -24,8 +24,8 @@ I refer to the Windows and Visual Studio Code environment part of the documentat
 
 The documentation can be found at the link below.
 
-- **Raspberry Pi Pico SDK**: [https://raspberrypi.github.io/pico-sdk-doxygen/index.html](https://raspberrypi.github.io/pico-sdk-doxygen/index.html)
-- **RPI Pico Getting Started Guide**: [https://rptl.io/pico-get-started](https://rptl.io/pico-get-started)
+- [Raspberry Pi Pico SDK](https://raspberrypi.github.io/pico-sdk-doxygen/index.html)
+- [RPI Pico Getting Started Guide](https://rptl.io/pico-get-started)
 
 The development environment configuration is well described in the guide, so you can follow it according to your own development environment.
 
@@ -39,8 +39,6 @@ At first, I tried to build without checking this part, but it kept failing, so I
 ## Run VS Code with Developer Command Prompt
 
 To use Visual Studio's build environment, run VS Code through the `Developer Command Prompt for VS 2019` as follows:
-
-w5100s-evb-pico-azure-iotcentral_
 
 <img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_1.jpg?raw=true">
 
@@ -83,12 +81,11 @@ With the IoT Central trial plan (7 days), you can create and use applications wi
 
 Subscription required after 7 days.
 
-For more information, refer to the MS Azure manual.
+For more information, refer to the MS Azure Guide.
 
-- [https://docs.microsoft.com/en-us/azure/iot-central/core/howto-create-iot-central-application](https://docs.microsoft.com/en-us/azure /iot-central/core/howto-create-iot-central-application)
+- [\[MS Guide\] Create an IoT Central application](https://docs.microsoft.com/en-us/azure/iot-central/core/howto-create-iot-central-application)
 
-- IoT Central home
-  - [https://apps.azureiotcentral.com](https://apps.azureiotcentral.com/)
+- [IoT Central home](https://apps.azureiotcentral.com/)
 
 
 # Create certificates with OpenSSL
@@ -139,7 +136,7 @@ The .conf file used to create the Root CA and Sub CA uses the contents in the gu
 ~/subca$ openssl rand -hex 16 > db/serial
 ~/subca$ echo 1001 > db/crlnumber
 
-*# Change certificate name (modify commonName value)**
+# Change certificate name (modify commonName value)
 ~/subca$ vi subca.conf
 
 ~/subca$ openssl rand -hex 16 > ../rootca/db/serial
@@ -200,7 +197,7 @@ Now that group registration is complete, create a certificate to be used on the 
 $ openssl genpkey -out device.key -algorithm RSA -pkeyopt rsa_keygen_bits:2048
 $ openssl req -new -key device.key -out device.csr
 
-**--> Common Name (e.g. server FQDN or YOUR name) []: Enter w5100s-evb-pico-01**
+==> Common Name (e.g. server FQDN or YOUR name) []: Enter w5100s-evb-pico-01
 
 $ openssl req -text -in device.csr -noout
 $ openssl ca -config subca.conf -in device.csr -out device.crt -extensions client_ext
@@ -221,7 +218,7 @@ Since we will be provisioning with an X.509 certificate, we define it as APP\_PR
 ```
 // The application you wish to use should be uncommented
 //
-// #define APP_TELEMETRY
+//#define APP_TELEMETRY
 //#define APP_C2D
 //#define APP_CLI_X509
 #define APP_PROV_X509
@@ -233,7 +230,7 @@ The generated device certificate must be added as a variable to sample\_certs.c.
 
 The variables to use to connect with IoT Central X.509 certificate authentication are as follows.
 
-| variable               | Certificates           |
+| Variable               | Certificates           |
 | ---------------------- | ---------------------- |
 | pico\_az\_CERTIFICATE  | device.crt certificate |
 | pico\_az\_PRIVATE\_KEY | device.key certificate |
@@ -250,7 +247,7 @@ You can open the file with VS Code and edit it directly, but it is cumbersome to
 
 Details can be found at the link below.
 
-- Reference Guide: [https://docs.microsoft.com/en-us/azure/iot-dps/tutorial-custom-hsm-enrollment-group-x509#configure-the-custom-hsm-stub-code]( https://docs.microsoft.com/en-us/azure/iot-dps/tutorial-custom-hsm-enrollment-group-x509#configure-the-custom-hsm-stub-code)
+- [Reference guide link](https://docs.microsoft.com/en-us/azure/iot-dps/tutorial-custom-hsm-enrollment-group-x509#configure-the-custom-hsm-stub-code)
 
 If you change the input part in the script to the target file name and paste it into the shell as it is, the result value in the form of a variable is output. In order to change the path to a parameter, only the input part was changed.
 
@@ -284,9 +281,9 @@ $ chmod +x convert_cert.sh
 $ ./convert_cert.sh <Certificate path>
 ```
 
-The key file is also converted in the same way.
+The key file is also can be convert in the same way.
 
-### Create file
+### Modify file
 
 Put the corresponding values in the `sample_cert.c` file.
 
@@ -314,7 +311,7 @@ const char pico_az_PRIVATE_KEY[] =
 
 ### Build
 
-Click the Build button at the bottom of VS Code or press the shortcut F7 to build.
+Click the Build button at the bottom of VS Code or press the shortcut <kbd>**F7**</kbd> to build.
 
 The first build may take a few minutes to complete.
 
@@ -347,10 +344,10 @@ The firmware to be used in W5100S-EVB-Pico is the main.uf2 file.
 
 Copy the firmware to the device through the following procedure.
 
-- While pressing the BOOTSEL button of W5100S-EVB-Pico, apply power to make it into Storage mode.
-    - If you enter Mode normally, the device drive named RPI-RP2 appears. (Windows environment)
-- Copy the main.uf2 file to the top-level path of the drive.
-- The device automatically restarts.
+- While pressing the **BOOTSEL button** of W5100S-EVB-Pico, supply power to make it into Storage mode.
+    - If you enter Storage mode, the device drive named RPI-RP2 appears. (Windows environment)
+- Copy the `main.uf2` file to the top-level path of the drive.
+- The device will restart automatically.
 
 ### Check the device created in IoT Central
 
