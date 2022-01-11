@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: single
 title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850io (1)"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-01-29 00:00
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---
@@ -25,9 +26,9 @@ RPI zero에 SPI 인터페이스를 통해 WIZ850io 모듈을 연결하여 이더
 
 아래 그림은 각 네트워크(WiFi / Ethernet)에 대해 연결된 공유기로 ping을 날려 본 결과이다.
 
-| 무선랜(WiFi: wlan0)만 사용 시         | 유선랜(ethernet: eth0)만 사용 시      |
-| ------------------------------ | ------------------------------ |
-| ![](/files/wlan_vs_eth-01.png) | ![](/files/wlan_vs_eth-02.png) |
+| 무선랜(WiFi: wlan0)만 사용 시  | 유선랜(ethernet: eth0)만 사용 시 |
+| ------------------------------ | -------------------------------- |
+| ![](/files/wlan_vs_eth-01.png) | ![](/files/wlan_vs_eth-02.png)   |
 
 
 이는 환경에 따라 달라질 수 있지만 안정성의 차이를 확인할 수 있는 정도는 된다고 생각한다.

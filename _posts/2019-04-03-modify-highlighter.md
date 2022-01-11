@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "[Jekyll] Clean blog theme code highlight 추가"
 categories: Jekyll
 date: 2019-04-03

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: single
 title: "[RaspberryPi zero W] headless 초기 설정"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-01-23
 tags: [raspberrypi, rpizero, headless, wlan]
 comments: true

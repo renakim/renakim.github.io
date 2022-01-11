@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "[Docker] Docker compose로 wordpress 설치"
 categories: Docker
 date: 2019-02-20

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "[Python] Version 설정 with Alternatives"
 categories: Python
 date: 2019-04-02

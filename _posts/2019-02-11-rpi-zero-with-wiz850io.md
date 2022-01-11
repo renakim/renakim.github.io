@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: single
 title: "[RaspberryPi zero W] Add ethernet interface with WIZ850io"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-02-11
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---

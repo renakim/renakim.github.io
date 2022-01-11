@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "[Google Cloud] Compute Engine - VM instance FTP 설정"
 categories: Docker
 date: 2019-03-08

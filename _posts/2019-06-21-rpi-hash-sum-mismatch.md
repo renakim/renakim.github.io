@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: single
 title: "[RaspberryPi] Hash Sum mismatch 에러"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-06-21
 tags: [raspberrypi]
 ---

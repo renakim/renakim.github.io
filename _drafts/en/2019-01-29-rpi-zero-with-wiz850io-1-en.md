@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "[RaspberryPi zero W] Add ethernet to Raspberry Pi zero W with WIZ850io (1)"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-01-29 00:00
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---

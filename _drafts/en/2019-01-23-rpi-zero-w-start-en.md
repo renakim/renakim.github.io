@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "[RaspberryPi zero W] headless setup"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-01-23
 tags: [raspberrypi, rpizero, headless, wlan]
 ---

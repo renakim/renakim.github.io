@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: single
 title: "[RaspberryPi zero W] 이더넷 추가 with WIZ850io (2)"
-categories: RaspberryPi
+categories:
+  - Raspberry Pi
 date: 2019-02-11
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---
