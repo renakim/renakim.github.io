@@ -40,12 +40,12 @@ At first, I tried to build without checking this part, but it kept failing, so I
 
 To use Visual Studio's build environment, run VS Code through the `Developer Command Prompt for VS 2019` as follows:
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_1.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_1.png?raw=true">
 
 
 > **This will open Visual Studio Code with all the correct environment variables set so that the toolchain is correctly configured.**
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_2.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_2.png?raw=true">
 
 
 ### VS Code settings
@@ -73,7 +73,7 @@ git clone https://github.com/Wiznet/RP2040-HAT-AZURE-C
 
 **Run VS code through the Developer Command Prompt, and then open the project directory through the Open Folder menu.**
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_4.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_4.png?raw=true">
 
 # IoT Central application setting
 
@@ -157,7 +157,7 @@ Click the new button → Create new enrollment group
 
 If you click the Save button to save, the screen to register the certificate appears at the bottom.
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_5.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_5.png?raw=true">
 
 After clicking the ‘Manage primary’ button, click the folder-shaped icon to upload the certificate.
 
@@ -182,7 +182,7 @@ After clicking the ‘Verify’ button, select the generated verfiy certificate 
 
 (If you can't see the files, select the option to view all files)
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_6.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_6.png?raw=true">
 
 When the proof of ownership is completed, the status is changed to Verified as shown in the screen above.
 
@@ -315,7 +315,7 @@ Click the Build button at the bottom of VS Code or press the shortcut <kbd>**F7*
 
 The first build may take a few minutes to complete.
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_9.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_9.png?raw=true">
 
 ```
 [main] Building folder: RP2040-HAT-AZURE-C 
@@ -353,11 +353,11 @@ Copy the firmware to the device through the following procedure.
 
 Confirm device creation
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_10.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_10.png?raw=true">
 
 Check the sample data sent from the example code
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_11.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_11.png?raw=true">
 
 
 ### Device log monitoring
@@ -369,6 +369,6 @@ Check the COM port number corresponding to W5100S-EVB-Pico in Windows Device Man
 In the case of Terra Term, you can connect by setting as follows.
 
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_13.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_13.png?raw=true">
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_14.jpg?raw=true">
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_14.png?raw=true">
