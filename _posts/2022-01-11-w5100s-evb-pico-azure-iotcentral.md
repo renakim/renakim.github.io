@@ -15,6 +15,16 @@ It can be developed in the same environment as the Raspberry Pi Pico platform, a
 - [WIZnet W5100S-EVB-Pico](https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-evb-pico)
 
 
+# Hardware setup
+
+The hardware setup is simple.
+
+Just connect the micro 5 pin cable to power the W5100S-EVB-Pico.
+
+Additionally, to use the network, I used an Ethernet cable to connect to an AP that supports a DHCP server.
+
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-hw.jpg?raw=true">
+
 
 # Set up development environment (Windows 10, VS Code)
 
