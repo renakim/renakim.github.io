@@ -383,3 +383,4 @@ In the case of Terra Term, you can connect by setting as follows.
 <img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_13.png?raw=true">
 
 <img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_14.png?raw=true">
+
