@@ -79,7 +79,7 @@ git clone https://github.com/Wiznet/RP2040-HAT-AZURE-C
 
 With the IoT Central trial plan (7 days), you can create and use applications without an Azure subscription.
 
-Subscription required after 7 days.
+The Azure Subscription required after 7 days.
 
 For more information, refer to the MS Azure Guide.
 
@@ -178,15 +178,17 @@ Generate a verify certificate using openssl. Enter the generated verification co
 ~/subca$ openssl ca -config subca.conf -in pop.csr -out pop.crt -extensions client_ext
 ```
 
-After clicking the ‘Verify’ button, select the generated verfiy certificate from the file selection pop-up window that appears.
-
-(If you can't see the files, select the option to view all files)
+After clicking the ‘Verify’ button, select the generated verify certificate from the file selection pop-up window that appears.
 
 <img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_6.png?raw=true">
 
+(If you can't see the files, select the option to view all files)
+
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_8.png?raw=true">
+
 When the proof of ownership is completed, the status is changed to Verified as shown in the screen above.
 
-Now that group registration is complete, create a certificate to be used on the device.
+Now the Group Enrollment is complete, will create a certificate to be used on the device.
 
 ## device cert
 
@@ -281,7 +283,7 @@ $ chmod +x convert_cert.sh
 $ ./convert_cert.sh <Certificate path>
 ```
 
-The key file is also can be convert in the same way.
+The key file is also can be converted in the same way.
 
 ### Modify file
 
@@ -367,7 +369,6 @@ Device operation status can be monitored using terminal programs such as Terra T
 Check the COM port number corresponding to W5100S-EVB-Pico in Windows Device Manager, and connect by setting the corresponding port in the terminal program.
 
 In the case of Terra Term, you can connect by setting as follows.
-
 
 <img src="https://github.com/renakim/renakim.github.io/blob/master/files/w5100s-evb-pico-azure-iotcentral_13.png?raw=true">
 
