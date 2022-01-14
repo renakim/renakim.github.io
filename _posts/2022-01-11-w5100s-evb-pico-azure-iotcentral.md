@@ -100,11 +100,13 @@ For more information, refer to the MS Azure Guide.
 
 # Create certificates with OpenSSL
 
-Generates an X.509 certificate to be used for device authentication. I used openssl, refer to the guide document below.
+Generates an X.509 certificate to be used for device authentication. I used OpenSSL (CLI), refer to the guide document below.
 
 - [\[MS Guide\] Tutorial: Using OpenSSL to create test certificates](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-x509-openssl)
 
-We will generate the certificates below and enter them into the IoT Central app and device code.
+I'll generate the certificates below and enter them into the IoT Central app and device code.
+
+>To use OpenSSL command, I used WSL(Windows Subsystem for Linux) environment.
 
 The .conf file used to create the Root CA and Sub CA uses the contents in the guide as it is, and only the name has been changed.
 
@@ -115,7 +117,7 @@ The .conf file used to create the Root CA and Sub CA uses the contents in the gu
 ## Root CA setup and creation
 
 - Create Root CA directory structure
-- Create Conf file
+- Create rootca.conf file
 - Generate certificate
 
 ```
@@ -135,6 +137,10 @@ The .conf file used to create the Root CA and Sub CA uses the contents in the gu
 ```
 
 ## Sub ca setup and creation
+
+* Create Sub CA directory structure
+* Create subca.conf file
+* Generate certificate
 
 ```
 ~/rootca$ cd ..
@@ -225,7 +231,7 @@ Modify and execute some application code.
 
 Set up the example application to be used in the main code.
 
-Since we will be provisioning with an X.509 certificate, we define it as APP\_PROV\_X509.
+Since I will be provisioning with an X.509 certificate, define it as APP\_PROV\_X509.
 
 ```
 // The application you wish to use should be uncommented
