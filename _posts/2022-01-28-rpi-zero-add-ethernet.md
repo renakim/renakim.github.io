@@ -138,7 +138,7 @@ _The W5500 device driver can be referred to in the following path._
 
 `sudo modprobe w5100_spi`
 
-모듈이 잘 올라갔는지 확인하기 위해 다음 명령어를 사용할 수 있다.
+Use the following command to check whether the driver module has been successfully loaded.
 
 `lsmod | grep w5100`
 
