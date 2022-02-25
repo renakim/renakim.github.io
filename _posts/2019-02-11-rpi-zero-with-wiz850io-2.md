@@ -10,7 +10,7 @@ tags: [raspberrypi, rpizero, wiz850io, w5500]
 지난 글 [[RaspberryPi zero W] 이더넷 추가 with WIZ850io (1)]({{ site.baseurl }}{% post_url 2019-01-29-rpi-zero-with-wiz850io-1 %})에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
 
 - ~~RPI zero 초기 설정~~
-  - ~~이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/2019/01/23/rpi-zero-w-start/)~~
+  - ~~이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/rpi-zero-w-start/)~~
 - ~~RPI zero kernel compile~~
 - **Device tree 작성 & 적용 (for W5500)**
 - **동작 테스트**

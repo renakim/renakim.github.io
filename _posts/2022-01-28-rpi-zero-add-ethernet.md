@@ -83,9 +83,9 @@ If all the pins are connected, it will look like the picture below.
 
 ## Install Raspberry Pi OS
 
-If you have to install Raspberry Pi OS, please refer below link.
+If you didn't install Raspberry Pi OS yet, please refer below link.
 
-- [Install Raspberry Pi OS with RPI Imager and Headless Setup](https://renakim.github.io/raspberry%20pi/rpi-imager-en/)
+- [Install Raspberry Pi OS with RPI Imager and Headless Setup](https://renakim.github.io/rpi-imager-en/)
 
 
 ## Enable Linux driver for WIZ850io

@@ -42,7 +42,7 @@ RPI zero에 SPI 인터페이스를 통해 WIZ850io 모듈을 연결하여 이더
 두 편으로 나누어 진행하며, 본 글에서는 RPI zero 초기 설정과 kernel compile에 대한 내용을 다룰 것이다.
 
 - RPI zero 초기 설정
-  - 이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/2019/01/23/rpi-zero-w-start/)
+  - 이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/rpi-zero-w-start/)
 - RPI zero kernel compile
 - Device tree 작성 & 적용 (for W5500)
 - 동작 테스트

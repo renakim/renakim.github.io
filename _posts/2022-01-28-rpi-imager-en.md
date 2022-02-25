@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Raspberry Pi] Install Raspberry Pi OS and Headless Setup with RPI Imager"
+title: "[Raspberry Pi] Install Raspberry Pi OS with RPI Imager and Headless Setup"
 categories:
   - Raspberry Pi
 date: 2022-01-28
@@ -75,7 +75,7 @@ Before disconnecting the USB reader, we will configure it to connect to the RPI 
 
 >To use WiFi, you need to create one more file. (RPI zero W model)
 
->WiFi Configuration file reference: [Raspberry Pi Headless setup - wpa-supplicant.conf](https://renakim.github.io/raspberry%20pi/rpi-zero-w-start/#wpa_supplicantconf){:target="\_blank"}
+>WiFi Configuration file reference: [Raspberry Pi Headless setup - wpa-supplicant.conf](https://renakim.github.io/rpi-zero-w-start/#wpa_supplicantconf){:target="\_blank"}
 
 
 ### Enable SSH
