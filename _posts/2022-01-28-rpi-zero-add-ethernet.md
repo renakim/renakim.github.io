@@ -72,7 +72,7 @@ For RPI zero, the direction may be confusing, from the side with the micro sd ca
 | 19 (SPI0_MOSI) | MOSI     |
 | 21 (SPI0_MISO) | MISO     |
 | 18 (BCM24)     | RSTn     |
-| 15 (BCM22)     | INTn     |
+| 22 (BCM25)     | INTn     |
 | 24 (SPI0_CE0)  | SCNn     |
 
 
