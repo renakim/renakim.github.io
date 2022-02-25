@@ -100,7 +100,7 @@ Since the binary file is already included in the OS, we can add the w5500 config
 
 The file name is w5500.dtbo that we will use.
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet-ls-dtbo.png" />
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet-ls-dtbo.png?raw=true" />
 
 _To modify files in the boot directory, root authority is required, so use the sudo command._
 
@@ -115,7 +115,7 @@ How to add text with vim
 - To quit edit mode: **Esc**
 - To save and quit file: **:wq**
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet-dtoverlay.png" />
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet-dtoverlay.png?raw=true" />
 
 
 After setting, reboot to apply Overlay setting.
@@ -132,7 +132,7 @@ Activate the W5500 ethernet device driver module using the `modprobe` command.
 
 _The W5500 device driver can be referred to in the following path._
 
-*   [Raspberry Pi linux - ethernet](https://github.com/raspberrypi/linux/tree/rpi-5.10.y/drivers/net/ethernet/wiznet)
+* [Raspberry Pi linux - ethernet](https://github.com/raspberrypi/linux/tree/rpi-5.10.y/drivers/net/ethernet/wiznet)
 
 `sudo modprobe w5100`
 
@@ -142,7 +142,7 @@ Use the following command to check whether the driver module has been successful
 
 `lsmod | grep w5100`
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet-lsmod />png)
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet-lsmod.png?raw=true" />
 
 
 Now, we can check the network interface with the `ifconfig -a` command. 
@@ -150,7 +150,7 @@ Now, we can check the network interface with the `ifconfig -a` command.
 We can see that the eth0 interface has been created. If a DHCP server is set up on the router, an IP can be assigned automatically.
 
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet_ifconfig-eth0.png" />
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet_ifconfig-eth0.png?raw=true" />
 
 
 
@@ -176,8 +176,8 @@ After save the file(:wq), reboot to apply configuration.
 
 `sudo reboot`
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet_dhcpcd-eth0.png" />
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet_dhcpcd-eth0.png?raw=true" />
 
 Now, we can connect to Raspberry Pi zero W with ethernet interface using static IP!
 
-<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet_ifconfig-eth0-static.png" />
+<img src="https://github.com/renakim/renakim.github.io/blob/master/files/rpizero-ethernet_ifconfig-eth0-static.png?raw=true" />
