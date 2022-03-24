@@ -65,8 +65,12 @@ To build in VS Code settings, cmake and Pico SDK path are set as follows.
 ```
 "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
 "cmake.configureSettings": {
-    "PICO_SDK_PATH": "D:\\_RaspberryPi_Pico\\pico-sdk"
+    // RPI Pico settings
+    "PICO_SDK_PATH": "D:\\_Project\\_RaspberryPi_Pico\\pico-sdk",
+    "PICO_TOOLCHAIN_PATH": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
 },
+// RPI Pico settings
+"cmake.generator": "NMake Makefiles",
 ```
 
 ## Repository
