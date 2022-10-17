@@ -140,7 +140,12 @@ Next, install umqtt library, write some code with Thonny, and send/receive data 
 
 The example code was referenced in IoTMQTTSample code in Azure-Samples.
 
-- [Azure-Samples/IoTMQTTSample - src/MicroPython](https://github.com/Azure-Samples/IoTMQTTSample/tree/master/src/MicroPython)
+- ~~[Azure-Samples/IoTMQTTSample - src/MicroPython (master)](https://github.com/Azure-Samples/IoTMQTTSample/tree/master/src/MicroPython)~~
+- [Azure-Samples/IoTMQTTSample - src/MicroPython](https://github.com/Azure-Samples/IoTMQTTSample/tree/9f4f5b5ad36416ed1850dfb4d942d2b2dc9a626d/src/MicroPython)
+
+**[2022.10.14] As the master branch was updated, the Micropython directory was removed. Edit with commit branch address**
+
+
 
 ## Get device information from IoT Explorer
 
