@@ -7,7 +7,7 @@ date: 2019-02-11
 tags: [raspberrypi, rpizero, wiz850io, w5500]
 ---
 
-지난 글 [[RaspberryPi zero W] 이더넷 추가 with WIZ850io (1)]({{ site.baseurl }}{% post_url 2019-01-29-rpi-zero-with-wiz850io-1 %})에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
+지난 글에 이어서, Device tree를 작성하는 내용부터 진행해 본다.
 
 - ~~RPI zero 초기 설정~~
   - ~~이전 글 참조: [[RaspberryPi zero W] headless 초기 설정](https://renakim.github.io/rpi-zero-w-start/)~~
@@ -24,8 +24,11 @@ tags: [raspberrypi, rpizero, wiz850io, w5500]
 RPI zero의 홈 디렉토리에 들어가 보면 zImage와 w5100.ko, w5100-spi.ko 파일이 있을 것이다.
 아래 명령으로 확인하자.
 
-    $ cd
-    $ ls -al
+```shell
+$ cd
+$ ls -al
+```
+
 
 커널 적용 방법은 두 가지로, 어느 방법으로 진행해도 무방하다.
 
