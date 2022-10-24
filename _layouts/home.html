@@ -2,19 +2,36 @@
 layout: archive
 ---
 
-{{ content }}
-
 <p class="message">
-  Hello! This is develop Note blog.
+  Welcome! This is develop Note blog.
 </p>
 
-<p>
-<a href="https://renakim.github.io/en">English Post</a>
-</p>
+<h1>English post</h1>
 
-<p>
-<a href="https://renakim.github.io/ko">Korean Post</a>
-</p>
+{% for en_post in site.en reversed %}
+<ul>
+  <li>
+    <a href="{{ en_post.url }}">{{ en_post.title }}</a>
+  </li>
+</ul>
+{% endfor %}
+
+
+<h1>Korean post</h1>
+
+{% for ko_post in site.ko reversed %}
+<ul>
+  <li>
+    <a href="{{ ko_post.url }}">{{ ko_post.title }}</a>
+  </li>
+</ul>
+{% endfor %}
+
+
+
+<!-- <p><a href="https://renakim.github.io/en">English Post</a></p> -->
+
+<!-- <p><a href="https://renakim.github.io/ko">Korean Post</a></p> -->
 
 
 {% if paginator %}
