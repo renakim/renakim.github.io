@@ -53,7 +53,7 @@ C 기반으로 WizFi360-EVB-Pico를 AWS IoT Core에 연동하는 과정을 정�
 
 가이드에도 강조되어 있지만 디바이스 **생성 시 나타나는 인증서 다운로드 페이지에서 인증서를 저장**해야 한다. 그렇지 않으면 사물 생성 과정을 다시 진행해야 한다.
 
-여기에서는 디바이스 인증서와 Pricate Key만 사용한다.
+여기에서는 디바이스 인증서와 Private Key만 사용한다.
 
 
 # Micropython 펌웨어 업로드
@@ -62,8 +62,6 @@ C 기반으로 WizFi360-EVB-Pico를 AWS IoT Core에 연동하는 과정을 정�
 
 - (한글) [W5100S-EVB-Pico에서 Micropython 및 MQTT를 사용하여 Azure IoT Hub에 연결하기](https://inmile.tistory.com/46)
 - (영문) [Connect to Azure IoT Hub using Micropython on W5100S-EVB-Pico](https://maker.wiznet.io/rena/projects/connect-to-azure-iot-hub-using-micropython-on-w5100s-evb-pico/)
-
-
 
 
 
